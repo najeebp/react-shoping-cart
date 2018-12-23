@@ -66,5 +66,17 @@
 }
 
 .font-small {
-  font-size: small
+  font-size: small;
+}
+
+.pos-absolute{
+  position: absolute;
+}
+
+.pos-relative {
+  position: relative;
+}
+
+.marg-lett-10 {
+  margin-left: 10px;
 }

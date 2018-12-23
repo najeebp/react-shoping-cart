@@ -5,6 +5,7 @@ import { updateCart } from '../../actions'
 import CartItem from '../../components/CartItem'
 import cartData from '../../data/data'
 import _ from 'lodash'
+import Amount from '../../components/Amount'
 
 class CartItemList extends Component {
 
@@ -35,14 +36,13 @@ class CartItemList extends Component {
 				title: <p className="para-bold"><b>PRICE</b></p>,
 				key: 4,
 				render: (text, record) => {
-					if (record.p_originalprice === record.p_price) {
-						return (<h3><b>{record.c_currency} {_.toUpper(record.p_quantity * record.p_price)}.00 </b></h3>)
-					} else {
-						return (<div>
-							<strike><h3 className="para-bold"><b>{record.c_currency} {_.toUpper(record.p_quantity * record.p_originalprice)}.00 </b></h3></strike>
-							<h3><b>{record.c_currency} {_.toUpper(record.p_quantity * record.p_price)}.00 </b></h3>
-						</div>)
-					}
+					return (record.p_originalprice === record.p_price ?
+						<h3><b><Amount currency={record.c_currency} amount={record.p_quantity * record.p_price} /></b></h3> :
+						<div>
+							<strike><h3 className="para-bold"><b><Amount currency={record.c_currency} amount={record.p_quantity * record.p_originalprice} /></b></h3></strike>
+							<h3><b><Amount currency={record.c_currency} amount={record.p_quantity * record.p_price} /></b></h3>
+						</div>
+					)
 				}
 			}
 		]

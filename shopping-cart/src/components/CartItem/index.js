@@ -81,7 +81,7 @@ class CartItem extends Component {
 						<Col span={12}>
 							<div className="modal-desc">
 								<h4><b>{_.toUpper(record.p_name)}</b></h4>
-								<h3><Amount currency={record.c_currency} amount={record.p_price} /></h3>
+								<h2><b><Amount currency={record.c_currency} amount={record.p_price} /></b></h2>
 								<h4 className="para-bold">{_.toUpper(record.p_style)}</h4>
 								<div className="display-flex">
 									{record.p_available_options.colors.map((color, index) => <ColorPalette key={index} color={color.hexcode} />)}
