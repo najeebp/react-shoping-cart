@@ -1,0 +1,70 @@
+.App {
+  background-color: 	#D9D9D9;
+}
+
+.Main {
+  background-color: white;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding: 2%;
+}
+
+.cursor-pointer {
+  cursor: pointer
+}
+
+.align-last {
+  text-align-last: end;
+}
+
+.align-left {
+  text-align-last: left;
+}
+
+.horizontal-line {
+  background-color: 	#D9D9D9;
+  height: 10px;
+  margin-bottom: 16px
+}
+
+.horizontal-line-with-2px {
+  background-color: 	#D9D9D9;
+  height: 2px;
+  margin-bottom: 16px
+}
+
+.width_65 {
+  width: 65%
+}
+
+.margin_r_2 {
+  margin-right: 2px
+}
+
+.text-align_r {
+  text-align: right;
+}
+
+.display-flex {
+  display: flex;
+  margin-left: 70px;
+}
+
+.para-bold {
+  color: darkgray;
+}
+
+.modal-desc {
+  text-align: center;
+}
+
+.color-palette {
+  width: 30px;
+  height: 15px; 
+  border: 1px solid;
+  margin-right: 5px;
+}
+
+.font-small {
+  font-size: small
+}
